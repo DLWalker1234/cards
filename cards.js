@@ -12,6 +12,6 @@ var create = document.getElementById("createBtn");
 
 create.addEventListener("click", function() {
 	var text = document.getElementById("textInput").value;
-	console.log(text);
-	
-})
+	text = document.getElementById('card').innerHTML;
+});
+
