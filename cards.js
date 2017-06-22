@@ -12,6 +12,18 @@ var create = document.getElementById("createBtn");
 
 create.addEventListener("click", function() {
 	var text = document.getElementById("textInput").value;
-	text = document.getElementById('card').innerHTML;
+	var body = document.getElementById("main");
+	main += finishedCard.innerHTML;
 });
 
+	
+	
+
+
+var finishedCard = function buildCard(text) {
+	let card = `<div class="Card">
+					<h3>${text}</h3>
+					<button id="delete">Delete</button>
+					</div>`
+	return card
+};
