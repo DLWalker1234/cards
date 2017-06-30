@@ -52,15 +52,13 @@ var output = document.getElementById("output");
 createButton.addEventListener("click", function(event) {
 	var input = document.getElementById("textArea").value
 	output.innerHTML += `<span id="card"> ` + input +`<button type="button" id='delete' class="btn btn-danger">Delete</button>` + `</span>`;
-	inText = ""
+	
 })
 //Event listener that will delete the parent node on a click, in this case it would be a div.
 output.addEventListener("click", function(event) {
 	if (event.target.id === "delete") {
-		//Jevon told me about this
-		var deleteButton = event.target.parentNode;
-		//this removes the child through the delete button
-		output.removeChild(deleteButton);
+		// //this removes the child through the delete button
+		output.removeChild(event.target.parentNode);
 	}
 })
 
